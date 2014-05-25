@@ -26,7 +26,8 @@ def manifesto_item(id):
     sheet = copy['main_manifesto_items']
     context = {
         'COPY' : copy,
-        'row' : sheet[int(id) - 1]
+        'row' : sheet[int(id) - 1],
+        'id' : str(id)
     }
     return render_template('manifesto_item.html', **context)
 
