@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {% if row['value'] %} {{ row['value'] }} - {% endif %}
+{% endblock title %}
+
+{% block content %}
+    <div id="mani_item">
+        <h1 class="fi-magnifying-glass large"><span>{{row['value']}}<span></h1>
+        <p>{{row['text']}}</p>
+    </div>
+{% endblock content %}

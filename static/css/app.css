@@ -1,0 +1,9 @@
+/*Generic*/
+h1 {margin-top: 50px;}
+
+/*Home page*/
+#manifesto_items_list {list-style-type: none; }
+h2 > a {padding-left: .5em;}
+
+/*Manifesto item page*/
+h1 > span {padding-left: .5em;}

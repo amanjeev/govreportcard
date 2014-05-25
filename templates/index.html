@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {% if title %}
+        {{ title }} -
+    {% endif %}
+{% endblock title %}
+
+{% block page_title %}
+    {{ page_title }}
+{% endblock page_title %}
+
+{% block content %}
+    <ul id="manifesto_items_list">
+    {% for row in COPY.main_manifesto_items %}
+        {% if loop.index != 1 %}
+            <li class="">
+            <h2 class="fi-magnifying-glass large"><a href="/manifesto/{{loop.index}}/">{{ row.value }}</a></h2>
+                <span class="label secondary radius">{{ row.tags }}</span>
+            </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endblock content %}
