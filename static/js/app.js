@@ -17,7 +17,10 @@ $.expr[":"].contains = $.expr.createPseudo(function(arg) {
             list.children("li").hide();
             foundLi = $('li:contains("' + input_value + '")');
             foundLi.show();
-            $("#no_result_message").show();
+            if (!foundLi.length > 0) {
+                $("#no_result_message").show();
+            }
+
         } else {
             list.children("li").show();
             $("#no_result_message").hide();
