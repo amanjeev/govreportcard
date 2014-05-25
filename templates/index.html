@@ -11,7 +11,7 @@
 {% endblock page_title %}
 
 {% block content %}
-    <input type="text" name="qfilter" id="qfilter_id" placeholder="Type here to quickly filter the list">
+    <input type="text" class="clearable" name="qfilter" id="qfilter_id" placeholder="Type here to quickly filter the list">
     <ul id="manifesto_items_list">
     {% for row in COPY.main_manifesto_items %}
         {% if loop.index != 1 %}
@@ -24,3 +24,9 @@
     </ul>
     <p id="no_result_message" style="display:none;">No results found.</p>
 {% endblock content %}
+
+{% block extra_body %}
+    <script type="text/javascript">
+    $("#qfilter_id").focus();
+    </script>
+{% endblock %}
