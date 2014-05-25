@@ -7,7 +7,9 @@
 {% block content %}
     <div id="mani_item">
         <h1 class="fi-magnifying-glass large"><span>{{row['value']}}<span></h1>
+        <span class="label secondary radius">{{ row.tags }}</span>
         <p>{{row['text']}}</p>
+
     </div>
 
     <div class="row">
@@ -20,7 +22,7 @@
         var disqus_shortname = 'governmentreportcard';
         var disqus_identifier = 'manifesto:{{id}}:{{row["key"]}}';
         var disqus_title = '{{row["key"]}}';
-        var disqus_url = '/manifesto/{{id}}/';
+        var disqus_url = 'http://govreportcard.herokuapp.com/manifesto/{{id}}/';
 
         (function() {
             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
