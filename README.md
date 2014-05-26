@@ -11,3 +11,4 @@ Powered by
 * [Foundation](http://foundation.zurb.com/)
 * [jQuery](https://jquery.com/)
 * [Google Drive](https://drive.google.com)
+* [Disqus](http://disqus.com/)
